@@ -58,7 +58,7 @@ enum struct ForwardStorageInfo_t
 			}
 			case OnCleanupInvisibilityWatch:
 			{
-				this.m_hForward[hookType] = new PrivateForward(ET_Hook, Param_Cell, Param_Cell);
+				this.m_hForward[hookType] = new PrivateForward(ET_Hook, Param_Cell, Param_Cell, Param_Cell);
 			}
 			case OnUpdateCloakMeter:
 			{
