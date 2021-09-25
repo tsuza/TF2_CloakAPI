@@ -1,0 +1,81 @@
+"Games"
+{
+	"tf"
+	{	
+		"Functions"
+		{
+			"CTFWeaponInvis::ActivateInvisibilityWatch()"
+			{
+				"signature"		"CTFWeaponInvis::ActivateInvisibilityWatch()"
+				"callconv"		"thiscall"
+				"return"		"bool"
+				"this"			"entity"
+			}
+			
+			"CTFWeaponInvis::CleanupInvisibilityWatch()"
+			{
+				"signature"		"CTFWeaponInvis::CleanupInvisibilityWatch()"
+				"callconv"		"thiscall"
+				"return"		"void"
+				"this"			"entity"
+			}
+			
+			"CTFPlayerShared::UpdateCloakMeter()"
+			{
+				"signature"		"CTFPlayerShared::UpdateCloakMeter()"
+				"callconv"		"thiscall"
+				"return"		"void"
+				"this"			"address"
+			}
+		}
+		
+		"Signatures"
+		{
+			"CTFWeaponInvis::ActivateInvisibilityWatch()"
+			{
+				"library"	"server"
+				"linux"		"@_ZN14CTFWeaponInvis25ActivateInvisibilityWatchEv"
+				"windows"	"\x55\x8B\xEC\x83\xEC\x0C\x56\x57\x8B\xF9\xE8\x2A\x2A\x2A\x2A\x8B\xF0\x85\xF6\x0F\x84\x2A\x2A\x2A\x2A\x8B\x16"
+			}
+			
+			"CTFWeaponInvis::CleanupInvisibilityWatch()"
+			{
+				"library"	"server"
+				"linux"		"@_ZN14CTFWeaponInvis24CleanupInvisibilityWatchEv"
+				"windows"	"\x55\x8B\xEC\x51\x56\xE8\x2A\x2A\x2A\x2A\x8B\xF0"
+			}
+			
+			"CTFWeaponInvis::SetCloakRates()"
+			{
+				// unique x-ref to string "mult_cloak_meter_consume_rate"
+				"library"	"server"
+				"linux"		"@_ZN14CTFWeaponInvis13SetCloakRatesEv"
+				"windows"	"\x55\x8B\xEC\x83\xEC\x08\x56\x57\x8B\xF9\xE8\x2A\x2A\x2A\x2A\x8B\xF0\x85\xF6\x74\x2A\x8B\x16\x8B\xCE\x8B\x92\x40\x01\x00\x00\xFF\xD2\x84\xC0\x75\x2A"
+			}
+			
+			"CTFPlayerShared::UpdateCloakMeter()"
+			{
+				// find raw contents of g_aDebuffConditions and jump to xref function with most references
+				"library"		"server"
+				"linux"			"@_ZN15CTFPlayerShared16UpdateCloakMeterEv"
+				"windows"		"\x55\x8B\xEC\x83\xEC\x18\x56\x8B\xF1\x6A\x08"
+			}
+		}
+		
+		"Offsets"
+		{
+			"CBaseEntity::GetBaseEntity()"
+			{
+				"windows"	"5"
+				"linux"		"6"
+			}
+			
+			"CTFPlayerShared::m_pOuter"
+			{
+				// checked in CTFPlayerShared::HasDemoShieldEquipped()
+				"windows"	"400"
+				"linux"		"400"
+			}
+		}
+	}
+}
