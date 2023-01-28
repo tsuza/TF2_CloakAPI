@@ -50,7 +50,7 @@
 				// unique x-ref to string "mult_cloak_meter_consume_rate"
 				"library"	"server"
 				"linux"		"@_ZN14CTFWeaponInvis13SetCloakRatesEv"
-				"windows"	"\x55\x8B\xEC\x83\xEC\x08\x56\x57\x8B\xF9\xE8\x2A\x2A\x2A\x2A\x8B\xF0\x85\xF6\x74\x2A\x8B\x16\x8B\xCE\x8B\x92\x40\x01\x00\x00\xFF\xD2\x84\xC0\x75\x2A"
+				"windows"	"\x55\x8B\xEC\x83\xEC\x08\x56\x57\x8B\xF9\xE8\x2A\x2A\x2A\x2A\x8B\xF0\x85\xF6\x74\x2A\x8B\x16\x8B\xCE\x8B\x92\x2A\x01\x00\x00\xFF\xD2\x84\xC0\x75\x2A"
 			}
 			
 			"CTFPlayerShared::UpdateCloakMeter()"
@@ -73,8 +73,8 @@
 			"CTFPlayerShared::m_pOuter"
 			{
 				// checked in CTFPlayerShared::HasDemoShieldEquipped()
-				"windows"	"400"
-				"linux"		"400"
+				"windows"	"396"
+				"linux"		"396"
 			}
 		}
 	}
